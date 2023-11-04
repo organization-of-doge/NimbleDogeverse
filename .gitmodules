@@ -1,0 +1,3 @@
+[submodule "source/cJSON"]
+	path = source/cJSON
+	url = https://github.com/SapphirePatches/cJSON
