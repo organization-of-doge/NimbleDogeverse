@@ -1,3 +1,3 @@
-# NimbleSapphire - WWP patches for Sapphire on Aroma
+# NimbleAquamarine - WWP patches for Aquamarine on Aroma
 
-Mod of Nimble for WWP on Sapphire (previously known as NoNameVerse)
+Mod of Nimble for WWP on Aquamarine
