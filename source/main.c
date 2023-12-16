@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     WHBLogUdpInit();
 #endif
 
-    log("Hello world from Nimble-Sapphire!");
+    log("Hello world from Nimble-Aquamarine!");
 
     //check Gamepad input to maybe skip patches
     VPADStatus status;
@@ -67,11 +67,11 @@ int main(int argc, char** argv)
     VPADRead(VPAD_CHAN_0, &status, 1, &error);
 
 	if (mochaResult != MOCHA_RESULT_SUCCESS) {
-		log("Nimble-Sapphire patches failed!");
+		log("Nimble-Aquamarine patches failed!");
 	}
     else if (skipPatches())
     {
-        log("Nimble-Sapphire patches skipped.");
+        log("Nimble-Aquamarine patches skipped.");
     }
     else
     {
@@ -80,7 +80,7 @@ int main(int argc, char** argv)
 			write_string(url_patches[i].address, url_patches[i].url);
 		}
 
-        log("Nimble-Sapphire patches completed!");
+        log("Nimble-Aquamarine patches completed!");
     }
 	
     if (mochaResult == MOCHA_RESULT_SUCCESS) {
