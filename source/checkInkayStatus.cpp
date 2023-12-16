@@ -42,7 +42,7 @@ static int CheckInkayJson(const char* jsonBuffer) {
 }
 
 bool skipPatches() {
-	std::string inkayConfigPath = "/plugins/config/inkay_sapphire.json";
+	std::string inkayConfigPath = "/plugins/config/inkay-aquamarine.json";
 
     char environmentPathBuffer[0x100];
     MochaUtilsStatus status;
@@ -50,7 +50,7 @@ bool skipPatches() {
 		log("Failed to get the environment path. Error: %s", Mocha_GetStatusStr(status));
     }
 
-	log("Environment path is: %s, Inkay-Sapphire config path is %s", environmentPathBuffer, (environmentPathBuffer + inkayConfigPath).c_str());
+	log("Environment path is: %s, Inkay-Aquamarine config path is %s", environmentPathBuffer, (environmentPathBuffer + inkayConfigPath).c_str());
 
 	FILE* configFile = fopen((environmentPathBuffer + inkayConfigPath).c_str(), "r");
 	if (configFile == NULL) {
@@ -63,14 +63,14 @@ bool skipPatches() {
 	fseek(configFile, 0, SEEK_SET); // seek back to beginning of file
 	
 	if (size > MAX_BUFFER_SIZE) {
-		log("Inkay-Sapphire config file is too large");
+		log("Inkay-Aquamarine config file is too large");
 		return true;
 	}
 	
 	char buffer[MAX_BUFFER_SIZE];
 	size_t bytesRead = fread(buffer, 1, MAX_BUFFER_SIZE, configFile);
 	if (bytesRead == 0) {
-		log("Inkay-Sapphire config file is empty");
+		log("Inkay-Aquamarine config file is empty");
 		return true;
 	}
 	
@@ -78,7 +78,7 @@ bool skipPatches() {
 	
 	int result = CheckInkayJson(const_buffer);
 	if (result == -1) {
-		log("Inkay-Sapphire config file is invalid");
+		log("Inkay-Aquamarine config file is invalid");
 		return true;
 	}
 	
