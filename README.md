@@ -1,3 +1,3 @@
-# NimbleAquamarine - WWP patches for Aquamarine on Aroma
+# NimbleDogeverse - WWP patches for Dogeverse on Aroma
 
-Mod of Nimble for WWP on Aquamarine
+Mod of Nimble for WWP on Dogeverse
